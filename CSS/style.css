@@ -923,3 +923,35 @@ td, th {
     background-color: #f5f6fa;
 }
 
+.login{
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+.form-control {
+    height: 45px;
+    line-height: 45px;
+    background: transparent;
+    border: 1px solid #d7dbda;
+    font-size: 14px;
+    border-radius: 10px;
+}
+.social_login_border {
+    height: 2px;
+    background-color: #e5e6ea;
+    width: 90%;
+    display: inline-block;
+}
+.social_buttons {
+    background: transparent !important;
+    border-radius: 6px !important;
+    padding: 5px 20px;
+    border: 1px solid #3e7ac8;
+}
+.social_buttons.google {
+    border: 1px solid #bb4646;
+}
+.btn-signup:hover{
+    color: #000000;
+}
