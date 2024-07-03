@@ -43,11 +43,19 @@
                     <li class="header-chooses-li nav-item"><a href="./Blogs.html" class="header-chooses-li-a nav-link">Blogs</a></li>
                     <li class="header-chooses-li nav-item"><a href="./Contact-Us.html" class="header-chooses-li-a nav-link">Contact us</a></li>
                   </ul>
-                  <form class="d-flex">
-                    <input class="search-input" type="text" placeholder="Search">
-                    <button type="button" class="Login"><a href="./Login.html">Login</a></button> 
+                  <form class="d-flex ">
+                    <div class="headerInput  "><input type="text" placeholder="Search" class="form-control"><i class="fas fa-search"></i></div>
+                    <a href="./Login.html"><button type="button" class="Login">Login</button></a>
                   </form>
                 </div>
+                <!-- <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn "><img class="rounded-circle" src="./images/th.jpeg" alt=""></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="./Profile.html"><i class="far fa-user"></i>Profile Info</a>
+                      <a href="#"><i class="far fa-heart"></i>Wishlist</a>
+                      <a href="#"><i class="fas fa-sign-out-alt"></i>Logout </a>
+                    </div>
+                </div> -->
                 <!-- <span style="position: relative; margin-left: 20px;">
                     <div class="countCart position-absolute">1</div>
                     <a href="./cart.html">
@@ -177,7 +185,7 @@
     <section>
         <div class="Product-section container-fluid">
             <div class="pt-4 pb-4 Product-content">
-                <div class="header-product d-flex justify-content-between mb-5 p-3">
+                <div class="header-product d-flex justify-content-between mb-4 p-3">
                     <span>
                         <span class="title-colored-part s1">New</span>
                         <span class="title-colored-part">Products</span>
@@ -188,40 +196,44 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="card m-auto mb-5" style="width:300px">
-                        <img class="card-img-top" src="./images/07icn9ql.png" alt="Card image">
+                        <div style="padding: 0 30px;"><img class="card-img-top" src="./images/1720037116-IMG-20240702-WA0043.jpg" alt="Card image"></div>
                         <div class="card-body">
                             <p class="product-details-p">Barcelona Retro Casual Shirt</p>
                             </span><span class="price">295</span><span class="e">EGP</span>
                             <i class="fas fa-shopping-cart carti"></i>
                             <i class="fas fa-arrow-right arrow"></i>
                         </div>
+                        <button class="fav-btn"><i class=" fs-6 far fa-heart"></i></button>
                     </div>
                     <div class="card m-auto mb-5" style="width:300px">
-                        <img class="card-img-top" src="./images/07icn9ql.png" alt="Card image">
+                        <div style="padding: 0 30px;"><img class="card-img-top" src="./images/1720037116-IMG-20240702-WA0043.jpg" alt="Card image"></div>
                         <div class="card-body">
                             <p class="product-details-p">Barcelona Retro Casual Shirt</p>
-                            <span class="price">295</span><span class="e">EGP</span>
+                            </span><span class="price">295</span><span class="e">EGP</span>
                             <i class="fas fa-shopping-cart carti"></i>
                             <i class="fas fa-arrow-right arrow"></i>
                         </div>
+                        <button class="fav-btn"><i class=" fs-6 far fa-heart"></i></button>
                     </div>
                     <div class="card m-auto mb-5" style="width:300px">
-                        <img class="card-img-top" src="./images/07icn9ql.png" alt="Card image">
+                        <div style="padding: 0 30px;"><img class="card-img-top" src="./images/1720037116-IMG-20240702-WA0043.jpg" alt="Card image"></div>
                         <div class="card-body">
                             <p class="product-details-p">Barcelona Retro Casual Shirt</p>
-                            <span class="price">295</span><span class="e">EGP</span>
+                            </span><span class="price">295</span><span class="e">EGP</span>
                             <i class="fas fa-shopping-cart carti"></i>
                             <i class="fas fa-arrow-right arrow"></i>
                         </div>
+                        <button class="fav-btn"><i class=" fs-6 far fa-heart"></i></button>
                     </div>
                     <div class="card m-auto mb-5" style="width:300px">
-                        <img class="card-img-top" src="./images/07icn9ql.png" alt="Card image">
+                        <div style="padding: 0 30px;"><img class="card-img-top" src="./images/1720037116-IMG-20240702-WA0043.jpg" alt="Card image"></div>
                         <div class="card-body">
                             <p class="product-details-p">Barcelona Retro Casual Shirt</p>
-                            <span class="price">295</span><span class="e">EGP</span>
+                            </span><span class="price">295</span><span class="e">EGP</span>
                             <i class="fas fa-shopping-cart carti"></i>
                             <i class="fas fa-arrow-right arrow"></i>
                         </div>
+                        <button class="fav-btn"><i class=" fs-6 far fa-heart"></i></button>
                     </div>
                     
                 </div>
@@ -447,5 +459,21 @@
         <p class="text-center m-0 p-0">CURVA © 2022. All Rights Reserved.</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+        var openDropdown = dropdowns;
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+    }
+  }
+    </script>
 </body>
 </html>
