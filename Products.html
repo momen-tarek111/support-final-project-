@@ -150,17 +150,14 @@
                 <div class="col-lg-3 col-12">
                     <div class="all-categ ">
                         <div class="categ-content p-3">
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <h5 onclick="myFunction2" style="font-weight: normal; cursor: pointer;" class="py-3 header-cat " id="li1"><i class="text-warning fas fa-bars"></i>   All Categories </h5></div>
-                            </div>
                             <div class=" row list-row mb-5">
                                 <div class="list-col col">
                                     <div class="list-group">
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 active-all"id="li2" >A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li3">A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li4">A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li5">A second item</div>
+                                        <h5  style="font-weight: normal; cursor: pointer;border: none;" class="py-3 header-cat list-group-item" ><i class="text-warning fas fa-bars"></i>   All Categories </h5>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer mt-2 fs-5 active-all">A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 ">A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 ">A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 ">A second item</div>
                                     </div>
                                 </div>
                             </div>
@@ -587,6 +584,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"></script>
     <script>
+         const listGroup = document.querySelector(".list-group");
+    listGroup.addEventListener("click", (event) => {
+        if (event.target.classList.contains("list-group-item")) {
+            // Remove active class from all items
+            document.querySelectorAll(".list-group-item").forEach(item => {
+                item.classList.remove("active-all");
+            });
+            // Add active class to the clicked item
+            event.target.classList.add("active-all");
+        }
+    });
         var priceSlider = document.getElementById('price-slider');
 
         noUiSlider.create(priceSlider, {
@@ -618,28 +626,20 @@
             }
         });
 
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-        var openDropdown = dropdowns;
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-    }
-  }
-// function myFunction2(){
-//     var x=event.target
-//     event.target.classList.toggle("active-all")
-// }
-// window.onclick=function(event){
-//     if(event.target.matches('.list-group-item')&&event.target==x){
-//         event.target.classList.remove("active-all")
+//         function myFunction() {
+//             document.getElementById("myDropdown").classList.toggle("show");
+//         }
+//         // Close the dropdown menu if the user clicks outside of it
+//         window.onclick = function(event) {
+//     if (!event.target.matches('.dropbtn')) {
+//       var dropdowns = document.getElementsByClassName("dropdown-content");
+//         var openDropdown = dropdowns;
+//         if (openDropdown.classList.contains('show')) {
+//           openDropdown.classList.remove('show');
+//         }
 //     }
-// }
-    </script>
+//   }
+ 
+</script>
 </body>
 </html>

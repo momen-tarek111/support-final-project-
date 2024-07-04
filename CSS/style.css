@@ -713,7 +713,7 @@ p {
 }
 .list-group .active-all {
     background-color: #f5f6fa;
-    border-left: 2px solid #d1ab5f;
+    border-left: 2px solid #d1ab5f !important;
     border-radius: 10px;
     color: #d1ab5f;
 }
