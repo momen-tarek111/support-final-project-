@@ -715,6 +715,7 @@ p {
     background-color: #f5f6fa;
     border-left: 2px solid #d1ab5f;
     border-radius: 10px;
+    color: #d1ab5f;
 }
 .curva-granola-btn{
     background-color: #d1ab5f !important;
@@ -1112,4 +1113,8 @@ td, th {
     border: 1px solid #939393 !important;
     border-radius: 8px !important;
     color: #939393 !important;
+}
+.category-list:hover{
+    color: #d1ab5f;
+    background-color: #f5f6fa;
 }

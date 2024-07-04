@@ -152,15 +152,15 @@
                         <div class="categ-content p-3">
                             <div class="row mb-3">
                                 <div class="col">
-                                    <h5 style="font-weight: normal;" class="py-3 header-cat cursor-pointer"><i class="text-warning fas fa-bars"></i>   All Categories </h5></div>
+                                    <h5 onclick="myFunction2" style="font-weight: normal; cursor: pointer;" class="py-3 header-cat " id="li1"><i class="text-warning fas fa-bars"></i>   All Categories </h5></div>
                             </div>
                             <div class=" row list-row mb-5">
                                 <div class="list-col col">
                                     <div class="list-group">
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 active-all" >A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " >A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " >A second item</div>
-                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " >A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 active-all"id="li2" >A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li3">A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li4">A second item</div>
+                                        <div type="button" class="list-group-item category-list category-list-main cursor-pointer fs-5 " id="li5">A second item</div>
                                     </div>
                                 </div>
                             </div>
@@ -617,6 +617,29 @@
                 maxPrice.value = values[1];
             }
         });
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+        var openDropdown = dropdowns;
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+    }
+  }
+// function myFunction2(){
+//     var x=event.target
+//     event.target.classList.toggle("active-all")
+// }
+// window.onclick=function(event){
+//     if(event.target.matches('.list-group-item')&&event.target==x){
+//         event.target.classList.remove("active-all")
+//     }
+// }
     </script>
 </body>
 </html>
