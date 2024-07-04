@@ -81,7 +81,7 @@
                     <button onclick="myFunction()" class="dropbtn "><img class="rounded-circle" src="./images/th.jpeg" alt=""></button>
                     <div id="myDropdown" class="dropdown-content">
                       <a href="./Profile.html"><i class="far fa-user"></i>Profile Info</a>
-                      <a href="#"><i class="far fa-heart"></i>Wishlist</a>
+                      <a href="#"><i class="far fa-heart ar"></i>Wishlist</a>
                       <a href="#"><i class="fas fa-sign-out-alt"></i>Logout </a>
                     </div>
                 </div> -->
@@ -180,7 +180,7 @@
                 <div class="col-lg-9 col-12">
                     <div class="row mb-5">
                         <div class="col-md-6 col-12 col-lg-4">
-                            <a href="./SingleProduct.html">
+                            <a href="./SingleProduct.html" class="prod">
                                 <div class="card product-card-container mb-5 cursor-pointer">
                                     <div class="card-body pb-0">
                                         <div class="img-container d-flex justify-content-center align-content-center">
@@ -584,8 +584,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"></script>
     <script>
+        var hearts =document.querySelectorAll(".far");
+        hearts.forEach(item=>{
+            if(!(item.classList.contains("ar"))){
+            item.addEventListener("click",(event)=>{
+                if(event.target.classList.contains("fav-color")){
+                    event.target.classList.remove("fav-color");
+                    event.target.classList.remove("fas");
+                    event.target.classList.toggle("far");
+                }
+                else{
+                    event.target.classList.add("fav-color")
+                    event.target.classList.remove("far");
+                    event.target.classList.toggle("fas");
+                }
+            })}
+        })
          const listGroup = document.querySelector(".list-group");
-    listGroup.addEventListener("click", (event) => {
+        listGroup.addEventListener("click", (event) => {
         if (event.target.classList.contains("list-group-item")) {
             // Remove active class from all items
             document.querySelectorAll(".list-group-item").forEach(item => {
@@ -626,19 +642,19 @@
             }
         });
 
-//         function myFunction() {
-//             document.getElementById("myDropdown").classList.toggle("show");
-//         }
-//         // Close the dropdown menu if the user clicks outside of it
-//         window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var openDropdown = dropdowns;
-//         if (openDropdown.classList.contains('show')) {
-//           openDropdown.classList.remove('show');
-//         }
-//     }
-//   }
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+        var openDropdown = dropdowns;
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+    }
+  }
  
 </script>
 </body>

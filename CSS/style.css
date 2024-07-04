@@ -1118,3 +1118,14 @@ td, th {
     color: #d1ab5f;
     background-color: #f5f6fa;
 }
+.fav-color {
+    color: #c45858;
+}
+.curva-pagination>li>button,.curva-pagination>li>span {
+    color: #000 !important;
+    border: 1px solid #e9edf4 !important;
+}
+.curva-pagination>li.active>button,.curva-pagination>li>button:focus {
+    background-color: #e9edf4!important;
+    box-shadow: none;
+}
