@@ -22,7 +22,7 @@ a{
 }
 
 .header-chooses-li-a{
-   color:rgb(127, 37, 37);
+    color: #000;
    font-weight: bold;
    font-size: 15px;
    margin-right:20px ;
