@@ -1129,3 +1129,9 @@ td, th {
     background-color: #e9edf4!important;
     box-shadow: none;
 }
+.header-categories-ul1-li-a:hover{
+    color: #d1ab5f !important;;
+}
+.header-categories-p{
+    color:#d1ab5f ;
+}    
